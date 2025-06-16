@@ -1,0 +1,740 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Ubuntu Sans';
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+} 
+
+#side-nav{
+    display:flex;
+    width: 300px;
+    height: 100vh;
+    background-color: #dc040400;
+    position: fixed;
+    left: -300px;
+    z-index: 1100;
+    transition: .5s left ease-in-out;
+}
+
+.fa.fa-close{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width:40px;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.fa.fa-close:hover{
+    background-color:#f56969;
+    color: #fff;
+}
+
+.side-nav-content{
+    position: relative;
+    top: 0;
+    left: -23px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    flex-direction: column;
+    background-color: #dc0404;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-list-side{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+
+    .side-nav-btn{
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #dc0404;
+    transition:.3s ease-in-out;
+    }
+
+    .side-nav-btn:hover{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    }
+
+navbar{
+    height: 100px;
+    width: 100vw;
+    background-color:#dc0404;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logos{
+    width:200px;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: -34px;
+}
+
+.logo a{
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+#logo-img{
+    height:52px;
+    /* display:inline-grid;
+    position: absolute;
+    bottom: 29.8%;*/
+   margin-right:23px;
+    z-index: -1; 
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.nav-item{
+    list-style-type: none;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    transition: .3s ease-in-out;
+}
+
+.nav-item a:hover{
+    color: #d8d6d6;
+    text-decoration:underline;
+}
+
+.nav-btn{
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #dc0404;
+    transition:.3s ease-in-out;
+}
+
+.nav-btn:hover{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.fa.fa-shopping-cart{
+    color: #fff;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.cart-nav-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fa.fa-bars{
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#home{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 64px;
+}
+
+.bouncer{
+    font-size: 64px;
+    color: #dc0404;
+    display:inline-flex;
+    animation:bounce 1s infinite alternate ease-in-out;
+
+}
+
+@keyframes bounce{
+    0%{
+        transform:translateY(0)
+    }
+
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+hr{
+    background-color: #dc0404;
+    color: #dc0404;
+    width: 130%;
+    height:2px ;
+    position: absolute;
+    top: 75%;
+    right: -18%;
+    z-index: 10;
+    margin: 10px;
+    text-align: center;
+}
+
+.home-text{
+    font-size: 45px;
+    text-transform: capitalize;
+}
+
+.home-card-container{
+    display: grid;
+    gap: 10px; 
+    position: relative;
+}
+
+.home-paragraph{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.all-cards{
+    display: flex;
+    gap: 30px;
+    
+}
+
+.card1, .card2{
+    width: 300px;
+    height: 300px;
+    border: 1px solid grey;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    border-radius: 5px;
+    background-color: #f5f2f2;
+    position: relative;
+    cursor: pointer;
+    opacity:70% ;
+}
+
+.dot1, .dot2{
+    font-size: 35px;
+    position: absolute;
+    color: transparent;
+    border: 1px solid grey;
+    border-radius:50%;
+    right: 20%;
+    top: 10%;
+    height: 30px;
+    width: 30px;
+}
+
+ .fa.fa-bus{
+    font-size: 75px;
+    text-align: left;
+    color: #dc0404;
+    padding: 20px;
+}
+
+.fa.fa-home{
+    font-size: 75px;
+    text-align: left;
+    color: #dc0404;
+    padding: 20px;
+}
+
+h3, .take-meal-at-restaurant,
+.receive-meal-at-doorstep{
+    text-align: left;
+    padding-top: 10px;
+}
+
+.receive-meal-at-doorstep{
+    margin-top: 20px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+#gift-card-section{
+    display:flex;
+    padding: 15px;
+}
+
+.send-or-redeem{
+    font-size: 24px;
+}
+
+.gift-card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gift-card-btn{
+    width: 50%;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc0404;
+    color: #fff;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.gift-card-btn:hover{
+      background-color: transparent;
+    color: #dc0404;
+    border: 2px solid #dc0404;
+}
+
+
+#payment-method{
+    background-color: #dc0404;
+    display: flex;
+}
+
+.payment-info{
+    padding:20px ;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.payment-header-text{
+    color: #fff;
+}
+
+.payment-text{
+    color: #e0dede;
+}
+
+.e-wallet-btn{
+    width: 60%;
+    border: none;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color:fff;
+    color:#dc0404;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.e-wallet-btn:hover{
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+#how-it-works-section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.section-text{
+    text-align: center;
+    padding: 20px;
+}
+
+.how-it-works-card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cardx{
+    width: 250px;
+    height: 250px;
+       padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 70%;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cardx:hover{
+    opacity: 100%;
+    transform: scale(1.1);
+     box-shadow: 0px 4px 8px 0px grey;
+
+}
+
+.cardx-img{
+    height: 100px;
+}
+
+.cardx-text{
+    font-size: 20px;
+    color: #e30606;
+    border-radius: 5px;
+}
+
+.cardx-paragraph{
+    font-size: 14px;
+}
+
+#kilimeal-app{
+    background-color: #dc0404;
+    display: grid;
+    margin-top: 64px;
+    padding-top: 20px;
+}
+
+.about-kilimeal-app{
+    color: #d8d6d6;
+    font-size: 15px;
+   padding: 15px;
+}
+
+.google-play-app-store{
+    padding-top: 30px;
+    padding-bottom:60px ;
+    margin-left: -35px;
+}
+
+.google-play-store, .apple-play-store{
+    height: 45px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+#cookies-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.fa.fa-info{
+    position: absolute;
+    color: grey;
+    top: 6%;
+    right: 3%;
+    background: transparent;
+    border: 2px solid grey;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.cookies{
+    width: 90%;
+    box-shadow: 0px 4px 8px 0px grey;
+    min-height: 150px;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.what-we-do-with-cookies{
+    margin-top: 10px;
+}
+
+.cookies-btn{
+    width: 20%;
+    height: 36px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc0404;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.cookies-btn:hover{
+    background-color: transparent;
+    border: 2px solid #dc0404;
+    color: #dc0404;
+}
+
+#footer{
+    background-color: black;
+}
+
+.footer-container{
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.div-FAQ > p > a,
+.div-privacy-policy > p > a,
+.div-terms-and-conditions > p > a,
+.div-copy-right > p > a{
+    color: #d8d6d6;
+    text-decoration: none;
+    transition:.3s ease-in-out;
+}
+
+.div-FAQ > p > a:hover,
+.div-privacy-policy > p > a:hover,
+.div-terms-and-conditions > p > a:hover,
+.div-copy-right > p > a:hover{
+    color:#dc0404;
+    text-decoration:underline;
+}
+
+.div-footer-icons{
+    display: flex;
+    gap:10px;
+    padding-right: 30px;
+}
+
+.fa.fa-instagram,
+.fa.fa-twitter,
+.fa.fa-facebook,
+.fa.fa-envelope{
+    color: #dc0404;
+    cursor: pointer;
+}
+
+.fa.fa-instagram:hover,
+.fa.fa-twitter:hover,
+.fa.fa-facebook:hover,
+.fa.fa-envelope:hover{
+    color:#faf6f6;
+}
+
+@media(max-width:480px){
+    .gift-card-btn{
+        font-size: 14px;
+    }
+}
+
+@media(max-width:640px){
+
+    /* #logo-img{
+    height:52px;
+    display:inline-grid;
+    position: absolute;
+    bottom: 29.8%;
+    left: 29%;
+    z-index: -1;
+} */
+
+    h1.home-text{
+        font-size: 35px;
+    }
+
+    .gift-card-img{
+        height: 200px;
+    }
+
+    .wallet-img{
+        height: 200px;
+    }
+
+    .gift-card-info{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .gift-card-btn{
+        font-size: 14px;
+    }
+
+    #kilimeal-app{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-kilimeal-app{
+        width: 100%;
+        text-align: left;
+    }
+
+    .google-play-store, .apple-play-store{
+        height: 30px;
+
+    }
+
+    .cookies-btn{
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    .footer-container{
+        display: grid;
+        place-content: center;
+    place-items: center;
+    }
+
+    .div-footer-icons i{
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width:840px){
+
+    
+    .nav-list{
+        display: none;
+    }
+
+    .nav-btn{
+        display: none;
+    }
+
+    .fa.fa-shopping-cart{
+        display: none;
+    }
+
+    .fa.fa-bars{
+        display: block;
+        padding: 40px;
+    }
+
+    #home{
+        text-align: center;
+    }
+
+    .home-text{
+        font-size:45px;
+    }
+
+    .all-cards{
+    display: grid;
+    gap: 20px;
+}
+
+    hr{
+        display: none;
+    }
+
+    #gift-card-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .gift-card-info{
+        padding-top: 30px;
+    }
+
+    .gift-card-btn{
+        width:40% ;
+    }
+
+    #payment-method{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .how-it-works-card-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250, 1fr));
+        place-content: center;
+        justify-items: center;
+       
+    }
+
+    .cookies-btn{
+        width: 40%;
+    }
+
+    .what-we-do-with-cookies{
+        font-size: 14px;
+    }
+
+    .we-use-cookies{
+        font-size: 25px;
+    }
+
+    #footer{
+        min-height: 100px;
+    }
+
+    .footer-container{
+        gap: 20px;
+    }
+
+}
+
+@media(min-width:841px){
+    .fa.fa-bars{
+        display: none;
+    }
+
+    .nav-item a{
+        font-size: 16px;
+    }
+
+    .nav-btn{
+        margin-right: 34px;
+    }
+
+    .gift-card-info{
+        padding-top: 30px;
+    }
+
+    .about-kilimeal-app{
+        max-width: 50%;
+    }
+
+    .google-play-app-store{
+        margin-left: 30px;
+}
+
+}
+
