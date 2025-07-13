@@ -1,4 +1,4 @@
-const sideNav = document.getElementById("side-nav");
+const sideNav = document.getElementById("side-nav-wrapper");
 const openSideNav = document.querySelector(".fa-bars");
 const closeSideNav = document.querySelector(".fa-close");
 
@@ -7,12 +7,12 @@ openSideNav.addEventListener("click", () => {
 });
 
 closeSideNav.addEventListener("click", () => {
-    sideNav.style.left = "-300px";
+    sideNav.style.left = "-100vw";
 });
 
 window.onclick = (event) => {
     if(event.target === sideNav){
-        sideNav.style.display = "none";
+        sideNav.style.left = "-100vw";
     }
   
 }

@@ -10,15 +10,24 @@ body{
     overflow-x: hidden;
 } 
 
+#side-nav-wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: -100vw;
+    z-index: 1100;
+    background-color: #dc040442;
+    transition: .5s left ease-in-out;
+}
+
 #side-nav{
     display:flex;
     width: 300px;
     height: 100vh;
-    background-color: #dc040400;
+    background-color: #dc0404;
     position: fixed;
-    left: -300px;
-    z-index: 1100;
-    transition: .5s left ease-in-out;
+    
+    
 }
 
 .fa.fa-close{
