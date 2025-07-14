@@ -16,7 +16,7 @@ body{
     position: fixed;
     left: -100vw;
     z-index: 1100;
-    background-color: #dc040442;
+    background-color: #dc040430;
     transition: .5s left ease-in-out;
 }
 
